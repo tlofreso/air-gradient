@@ -1,30 +1,28 @@
 /*
-This is the code for the AirGradient DIY Air Quality Sensor with an ESP8266 Microcontroller.
+This is the code for the AirGradient DIY BASIC Air Quality Sensor with an ESP8266 Microcontroller.
 
 It is a high quality sensor showing PM2.5, CO2, Temperature and Humidity on a small display and can send data over Wifi.
 
-For build instructions please visit https://www.airgradient.com/diy/
+Build Instructions: https://www.airgradient.com/open-airgradient/instructions/diy/
 
-Compatible with the following sensors:
-Plantower PMS5003 (Fine Particle Sensor)
-SenseAir S8 (CO2 Sensor)
-SGP30 (TVOC)
-
-Please install ESP8266 board manager (tested with version 3.0.0)
+Kits (including a pre-soldered version) are available: https://www.airgradient.com/open-airgradient/kits/
 
 The codes needs the following libraries installed:
-"WifiManager by tzapu, tablatronix" tested with Version 2.0.3-alpha
-"ESP8266 and ESP32 OLED driver for SSD1306 displays by ThingPulse, Fabrice Weinberg" tested with Version 4.1.0
-"SGP30" by Rob Tillaart tested with Version 0.1.4 
+“WifiManager by tzapu, tablatronix” tested with version 2.0.11-beta
+“U8g2” by oliver tested with version 2.32.15
 
 Configuration:
-Please set in the code below which sensor you are using and if you want to connect it to WiFi.
+Please set in the code below the configuration parameters.
+
+If you have any questions please visit our forum at https://forum.airgradient.com/
 
 If you are a school or university contact us for a free trial on the AirGradient platform.
-https://www.airgradient.com/schools/
+https://www.airgradient.com/
 
 MIT License
+
 */
+
 
 #include "SGP30.h"
 SGP30 SGP;
