@@ -18,7 +18,7 @@ AirGradient ag = AirGradient();
 // Config ----------------------------------------------------------------------
 
 // Optional.
-const char* deviceId = "";
+const char* deviceId = "outdoor-rear-tvoc";
 
 // set to 'F' to switch display from Celcius to Fahrenheit
 char temp_display = 'F';
@@ -148,6 +148,12 @@ String GenerateMetrics() {
   }
 
   if (hasTVOC) {
+    SGP.measure(true);
+
+    uint16_t bl_co2 = 0;
+    uint16_t bl_tvoc = 0;
+    bool b = SGP.getBaseline(&bl_co2, &bl_tvoc);
+
     int stat = SGP.getTVOC();
 
     message += "# HELP tvoc TVOC value, in ppm\n";
